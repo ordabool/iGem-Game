@@ -1,0 +1,14 @@
+version: '2.2'
+
+services: 
+    igem-react:
+      build: ./react
+      container_name: "iGem-react"
+      user: "node"
+      volumes:
+        - ./react/app:/usr/app
+        - /usr/app/node_modules
+      ports: 
+        - "4000:3000"
+      environment:
+        NODE_ENV: development
