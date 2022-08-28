@@ -1,0 +1,95 @@
+{
+	"Trp": { "combinations": ["UGG"], "fullname": "Tryptophan", "info": "" },
+	"Phe": {
+		"combinations": ["UUU", "UUC"],
+		"fullname": "Phenylalanine",
+		"info": ""
+	},
+	"Leu": {
+		"combinations": ["UUA", "UUG", "CUU", "CUC", "CUA", "CUG"],
+		"fullname": "Leucine",
+		"info": ""
+	},
+	"Ser": {
+		"combinations": ["UCU", "UCC", "UCA", "UCG", "AGU", "AGC"],
+		"fullname": "Serine",
+		"info": ""
+	},
+	"Tyr": {
+		"combinations": ["UAU", "UAC"],
+		"fullname": "Tyrosine",
+		"info": ""
+	},
+	"Cys": {
+		"combinations": ["UGU", "UGC"],
+		"fullname": "Cysteine",
+		"info": ""
+	},
+	"Pro": {
+		"combinations": ["CCU", "CCC", "CCA", "CCG"],
+		"fullname": "Proline",
+		"info": ""
+	},
+	"His": {
+		"combinations": ["CAU", "CAC"],
+		"fullname": "Histidine",
+		"info": ""
+	},
+	"Gln": {
+		"combinations": ["CAA", "CAG"],
+		"fullname": "Glutamine",
+		"info": ""
+	},
+	"Arg": {
+		"combinations": ["CGU", "CGC", "CGA", "CGG", "AGA", "AGG"],
+		"fullname": "Arginine",
+		"info": ""
+	},
+	"Ile": {
+		"combinations": ["AUU", "AUC", "AUA"],
+		"fullname": "Isoleucine",
+		"info": ""
+	},
+	"Met": { "combinations": ["AUG"], "fullname": "Methionine", "info": "" },
+	"Thr": {
+		"combinations": ["ACU", "ACC", "ACA", "ACG"],
+		"fullname": "Threonine",
+		"info": ""
+	},
+	"Asn": {
+		"combinations": ["AAU", "AAC"],
+		"fullname": "Asparagine",
+		"info": ""
+	},
+	"Lys": { "combinations": ["AAA", "AAG"], "fullname": "Lysine", "info": "" },
+	"Val": {
+		"combinations": ["GUU", "GUC", "GUA", "GUG"],
+		"fullname": "Valine",
+		"info": ""
+	},
+	"Ala": {
+		"combinations": ["GCU", "GCC", "GCA", "GCG"],
+		"fullname": "Alanine",
+		"info": ""
+	},
+	"Asp": {
+		"combinations": ["GAU", "GAC"],
+		"fullname": "Aspartate",
+		"info": ""
+	},
+	"Glu": {
+		"combinations": ["GAA", "GAG"],
+		"fullname": "Glutamate",
+		"info": ""
+	},
+	"Gly": {
+		"combinations": ["GGU", "GGC", "GGA", "GGG"],
+		"fullname": "Glycine",
+		"info": ""
+	},
+	"Stop": {
+		"combinations": ["UAA", "UAG", "UGA"],
+		"fullname": "Selenocysteine/Pyrrolysine",
+		"info": ""
+	}
+}
