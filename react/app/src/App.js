@@ -1,15 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import "./App.css";
+import Level1 from "./components/Level1/Level1";
+import Menu from "./components/Menu/Menu";
 
 function App() {
 	return (
 		<div className="App">
-			<h3>iGem React Game</h3>
-			<p>
-				This is where we will develop the iGem game. Already have
-				react-bootstrap and react-icons installed
-			</p>
+			<Level1 />
 		</div>
 	);
 }
