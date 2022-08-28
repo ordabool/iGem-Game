@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css","webpack://src/components/Level1/Level1.css"],"names":[],"mappings":"AAAA,KACE,YACF,CCFA,YACC,SAAU,CACV,UAAW,CACX,UAAW,CACX,iBACD","file":"main.9d1c07cb.chunk.css","sourcesContent":["html {\n  padding: 10px;\n}",".base-input {\n\twidth: 3em;\n\theight: 3em;\n\tmargin: 1em;\n\ttext-align: center;\n}\n"]}
