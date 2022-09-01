@@ -78,7 +78,7 @@ function Level1() {
 		e.stopPropagation();
 		let currentInputIdNum = parseInt(e.target.id.slice(-1));
 		let key = e.key;
-		if (key == "Backspace") {
+		if (key === "Backspace") {
 			e.target.value = "";
 			if (currentInputIdNum > minInputNumber) {
 				let prevInputId = inputIdPrefix + (currentInputIdNum - 1);
