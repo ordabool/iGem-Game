@@ -1,11 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import Level1 from "./components/Level1/Level1";
+import AminoAcidsLevel from "./components/AminoAcidsLevel/AminoAcidsLevel";
 
 function App() {
 	return (
 		<div className="App">
-			<Level1 />
+			<AminoAcidsLevel />
 		</div>
 	);
 

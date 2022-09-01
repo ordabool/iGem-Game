@@ -1,13 +1,13 @@
 import { useState } from "react";
 import acids from "../../data/acids.json";
 import { bases } from "../../data/bases.json";
-import "./Level1.css";
+import "./AminoAcidsLevel.css";
 
 const inputIdPrefix = "base";
 const minInputNumber = 1;
 const maxInputNumber = 3;
 
-function Level1() {
+function AminoAcidsLevel() {
 	const [combination, setCombination] = useState({
 		base1: "",
 		base2: "",
@@ -41,7 +41,7 @@ function Level1() {
 
 	return (
 		<div className="container text-center">
-			<h3>Level1</h3>
+			<h3>Amino Acids</h3>
 			<p> Explanation paragraph</p>
 
 			<input
@@ -99,4 +99,4 @@ function Level1() {
 	}
 }
 
-export default Level1;
+export default AminoAcidsLevel;
