@@ -1,6 +1,23 @@
 .base-input {
-	width: 3em;
-	height: 3em;
+	width: 2em;
+	height: 2em;
 	margin: 1em;
 	text-align: center;
+}
+
+input {
+	background-color: transparent;
+	color: white;
+	font-weight: bold;
+	border: white 3px solid;
+	font-size: 2em;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.resultsSeperator {
+	margin-top: 3em;
 }

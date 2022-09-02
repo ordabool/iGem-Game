@@ -101,7 +101,7 @@
 	},
 	"Stop": {
 		"combinations": ["UAA", "UAG", "UGA"],
-		"fullname": "Selenocysteine/Pyrrolysine",
-		"info": "You just found stop codon!"
+		"fullname": "Stop codon",
+		"info": ""
 	}
 }

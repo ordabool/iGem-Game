@@ -4,8 +4,10 @@ import AminoAcidsLevel from "./components/AminoAcidsLevel/AminoAcidsLevel";
 
 function App() {
 	return (
-		<div className="App">
-			<AminoAcidsLevel />
+		<div className="container">
+			<div className="App">
+				<AminoAcidsLevel />
+			</div>
 		</div>
 	);
 
