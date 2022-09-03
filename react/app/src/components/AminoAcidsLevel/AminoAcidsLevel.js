@@ -35,8 +35,8 @@ function AminoAcidsLevel() {
 
 	useEffect(() => {
 		// Build the feedback for the player. There are 2 options:
-		// 1 - The bases are a valid acid! show it to the player and (TODO:) display additional info
-		// 2 - TODO: The player has already found this amino acid
+		// 1 - The bases are a valid acid! show it to the player and display additional info
+		// 2 - The player has already found this amino acid
 		let isFullCombination =
 			combination.base1 && combination.base2 && combination.base3;
 		if (isFullCombination) {
@@ -55,10 +55,10 @@ function AminoAcidsLevel() {
 					} else {
 						setFeedback(
 							<>
-								<p>
+								<h5>
 									{value.fullname} ({acidKey})
-								</p>
-								<p className="explanation">{value.info}</p>
+								</h5>
+								<p>{value.info}</p>
 							</>
 						);
 						let newDiscoveredAcids = { ...discoveredAcids };
@@ -75,11 +75,6 @@ function AminoAcidsLevel() {
 				acidsFoundCount++;
 			}
 		}
-		console.log(
-			"newState",
-			{ ...discoveredAcids, acidsFoundCount },
-			discoveredAcids
-		);
 		setDiscoveredAcids((discoveredAcids) => ({
 			...discoveredAcids,
 			acidsFoundCount,
@@ -98,7 +93,6 @@ function AminoAcidsLevel() {
 				<ul>
 					{discoveredAcids.acids &&
 						Object.keys(discoveredAcids.acids).map((acidKey, i) => {
-							console.log(discoveredAcids.acids[acidKey]);
 							if (discoveredAcids.acids[acidKey]) {
 								return (
 									<li key={i}>{acids[acidKey].fullname}</li>
@@ -114,21 +108,8 @@ function AminoAcidsLevel() {
 		<div className="container text-center">
 			<h2>Amino Acids</h2>
 			<p className="explanation">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-				eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel
-				facilisis volutpat est velit egestas. Adipiscing vitae proin
-				sagittis nisl rhoncus mattis rhoncus urna. Consequat id porta
-				nibh venenatis cras sed felis eget velit. Convallis convallis
-				tellus id interdum velit laoreet id. Nulla facilisi cras
-				fermentum odio eu. Mattis nunc sed blandit libero. Etiam erat
-				velit scelerisque in. Aliquet porttitor lacus luctus accumsan
-				tortor. Potenti nullam ac tortor vitae purus faucibus. Risus
-				pretium quam vulputate dignissim. Id diam maecenas ultricies mi
-				eget. Facilisis mauris sit amet massa vitae. Lectus mauris
-				ultrices eros in cursus turpis massa tincidunt. Sit amet
-				facilisis magna etiam tempor orci. Eu consequat ac felis donec.
-				Donec adipiscing tristique risus nec feugiat in fermentum
-				posuere urna.
+				Try to use the 3 bases (A,C,G,U) in order to discover amino
+				acids!
 			</p>
 
 			<input
@@ -152,9 +133,9 @@ function AminoAcidsLevel() {
 
 			{feedback}
 
-			{/* TODO: display a list of the successfully found acids */}
-
 			{foundOutput}
+
+			<div className="bottomElement"></div>
 		</div>
 	);
 

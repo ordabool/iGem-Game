@@ -1,15 +1,14 @@
 .base-input {
 	width: 2em;
 	height: 2em;
-	margin: 1em;
+	margin: 1em 0.3em;
 	text-align: center;
 }
 
 input {
 	background-color: transparent;
-	color: white;
 	font-weight: bold;
-	border: white 3px solid;
+	border: black 3px solid;
 	font-size: 2em;
 }
 
