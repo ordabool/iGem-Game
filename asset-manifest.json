@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/iGem-Game/static/css/main.79d08f08.chunk.css",
-    "main.js": "/iGem-Game/static/js/main.682d27e0.chunk.js",
-    "main.js.map": "/iGem-Game/static/js/main.682d27e0.chunk.js.map",
+    "main.css": "/iGem-Game/static/css/main.4c140726.chunk.css",
+    "main.js": "/iGem-Game/static/js/main.bdc562b7.chunk.js",
+    "main.js.map": "/iGem-Game/static/js/main.bdc562b7.chunk.js.map",
     "runtime-main.js": "/iGem-Game/static/js/runtime-main.81f05d71.js",
     "runtime-main.js.map": "/iGem-Game/static/js/runtime-main.81f05d71.js.map",
     "static/css/2.61b4cb56.chunk.css": "/iGem-Game/static/css/2.61b4cb56.chunk.css",
-    "static/js/2.d6ca13ea.chunk.js": "/iGem-Game/static/js/2.d6ca13ea.chunk.js",
-    "static/js/2.d6ca13ea.chunk.js.map": "/iGem-Game/static/js/2.d6ca13ea.chunk.js.map",
+    "static/js/2.6e5af245.chunk.js": "/iGem-Game/static/js/2.6e5af245.chunk.js",
+    "static/js/2.6e5af245.chunk.js.map": "/iGem-Game/static/js/2.6e5af245.chunk.js.map",
     "static/js/3.fd1dce94.chunk.js": "/iGem-Game/static/js/3.fd1dce94.chunk.js",
     "static/js/3.fd1dce94.chunk.js.map": "/iGem-Game/static/js/3.fd1dce94.chunk.js.map",
     "index.html": "/iGem-Game/index.html",
     "static/css/2.61b4cb56.chunk.css.map": "/iGem-Game/static/css/2.61b4cb56.chunk.css.map",
-    "static/css/main.79d08f08.chunk.css.map": "/iGem-Game/static/css/main.79d08f08.chunk.css.map",
-    "static/js/2.d6ca13ea.chunk.js.LICENSE.txt": "/iGem-Game/static/js/2.d6ca13ea.chunk.js.LICENSE.txt"
+    "static/css/main.4c140726.chunk.css.map": "/iGem-Game/static/css/main.4c140726.chunk.css.map",
+    "static/js/2.6e5af245.chunk.js.LICENSE.txt": "/iGem-Game/static/js/2.6e5af245.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.81f05d71.js",
     "static/css/2.61b4cb56.chunk.css",
-    "static/js/2.d6ca13ea.chunk.js",
-    "static/css/main.79d08f08.chunk.css",
-    "static/js/main.682d27e0.chunk.js"
+    "static/js/2.6e5af245.chunk.js",
+    "static/css/main.4c140726.chunk.css",
+    "static/js/main.bdc562b7.chunk.js"
   ]
 }
