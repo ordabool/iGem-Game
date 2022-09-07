@@ -1,18 +1,25 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
 import "./App.css";
-import AminoAcidsLevel from "./components/AminoAcidsLevel/AminoAcidsLevel";
+import AminoAcidsScene from "./components/AminoAcidsScene/AminoAcidsScene";
+import StoryScene from "./components/StoryScene/StoryScene";
 
 function App() {
+	const [activeScenes, setActiveScenes] = useState({
+		StoryScene: true,
+		AminoAcidsScene: false,
+	});
+
 	return (
 		<div className="container">
 			<div className="App">
-				<AminoAcidsLevel />
+				{activeScenes.StoryScene && (
+					<StoryScene setActiveScenes={setActiveScenes} />
+				)}
+				{activeScenes.AminoAcidsScene && <AminoAcidsScene />}
 			</div>
 		</div>
 	);
-
-	// Used this guide for connectivity with Github Pages
-	// https://betterprogramming.pub/how-to-host-your-react-app-on-github-pages-for-free-919ad201a4cb
 }
 
 export default App;

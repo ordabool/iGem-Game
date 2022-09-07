@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import acids from "../../data/acids.json";
 import { bases } from "../../data/bases.json";
-import "./AminoAcidsLevel.css";
+import "./AminoAcidsScene.css";
 
 const inputIdPrefix = "base";
 const minInputNumber = 1;
 const maxInputNumber = 3;
 
-function AminoAcidsLevel() {
+function AminoAcidsScene() {
 	const [combination, setCombination] = useState({
 		base1: "",
 		base2: "",
@@ -171,4 +171,4 @@ function AminoAcidsLevel() {
 	}
 }
 
-export default AminoAcidsLevel;
+export default AminoAcidsScene;
