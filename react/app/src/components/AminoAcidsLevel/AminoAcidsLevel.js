@@ -87,7 +87,7 @@ function AminoAcidsLevel() {
 			<>
 				<hr className="resultsSeperator" />
 				<h4>
-					You found: ({discoveredAcids.acidsFoundCount} /
+					You found: ({discoveredAcids.acidsFoundCount} /{" "}
 					{discoveredAcids.acidsCount})
 				</h4>
 				<ul>
@@ -108,8 +108,10 @@ function AminoAcidsLevel() {
 		<div className="container text-center">
 			<h2>Amino Acids</h2>
 			<p className="explanation">
-				Try to use the 3 bases (A,C,G,U) in order to discover amino
-				acids!
+				For the bacteria to be able to express the genes that we just
+				discovered, we need building blocks. In biology these building
+				blocks are called amino acids. Use the letters (nucleotides) A,
+				U, G, C to find all 21 amino acids.
 			</p>
 
 			<input

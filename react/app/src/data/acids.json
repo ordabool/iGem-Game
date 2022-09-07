@@ -57,7 +57,7 @@
 	"Met": {
 		"combinations": ["AUG"],
 		"fullname": "Methionine",
-		"info": "Methionine starts the production of proteins in your body. High levels of methionine can be found in eggs, meat, and fish; sesame seeds, Brazil nuts, and some other plant seeds; and cereal grains. Most fruits and vegetables contain very little."
+		"info": "Methionine starts the production of proteins in your body. High levels of methionine can be found in eggs, meat, and fish; sesame seeds, Brazil nuts, and some other plant seeds; and cereal grains. Most fruits and vegetables contain very little. It is also used as a start codon."
 	},
 	"Thr": {
 		"combinations": ["ACU", "ACC", "ACA", "ACG"],
