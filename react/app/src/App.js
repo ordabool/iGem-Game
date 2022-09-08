@@ -5,18 +5,18 @@ import AminoAcidsScene from "./components/AminoAcidsScene/AminoAcidsScene";
 import StoryScene from "./components/StoryScene/StoryScene";
 
 function App() {
-	const [activeScenes, setActiveScenes] = useState({
-		StoryScene: true,
-		AminoAcidsScene: false,
-	});
+	const components = {
+		story: StoryScene,
+		aminoAcids: AminoAcidsScene,
+	};
 
+	const [activeScene, setActiveScene] = useState("story");
+
+	const SpecificScene = components[activeScene];
 	return (
 		<div className="container">
 			<div className="App">
-				{activeScenes.StoryScene && (
-					<StoryScene setActiveScenes={setActiveScenes} />
-				)}
-				{activeScenes.AminoAcidsScene && <AminoAcidsScene />}
+				<SpecificScene setActiveScene={setActiveScene} />
 			</div>
 		</div>
 	);
