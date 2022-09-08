@@ -133,6 +133,14 @@ function AminoAcidsScene() {
 				onKeyDown={keyPressed}
 			></input>
 
+			<button
+				type="button"
+				className="hintButton btn btn-outline-primary btn-sm"
+				onClick={displayNextLetter}
+			>
+				Hint
+			</button>
+
 			{feedback}
 
 			{foundOutput}
@@ -168,6 +176,93 @@ function AminoAcidsScene() {
 		let newCombination = { ...combination };
 		newCombination[currentInputId] = e.target.value;
 		setCombination(newCombination);
+	}
+
+	// Display the next letter in the combination. There are several options:
+	// 1. The combination is full, in that case reset and choose the first letter from the first missing acid
+	// 2. Partial combination (there are already 1-2 letters), in that case search a way to complete the combination.
+	//    If there isn't one, revert to option 1
+	// 3. The combination is empty, act as option 1
+	function displayNextLetter() {
+		let isFullCombination =
+			combination.base1 !== "" &&
+			combination.base2 !== "" &&
+			combination.base3 !== "";
+		let isPartialCombination =
+			(combination.base1 !== "" ||
+				combination.base2 !== "" ||
+				combination.base3 !== "") &&
+			!isFullCombination;
+		let isEmptyCombination =
+			combination.base1 === "" &&
+			combination.base2 === "" &&
+			combination.base3 === "";
+
+		// console.log("isFullCombination", isFullCombination);
+		// console.log("isPartialCombination", isPartialCombination);
+		// console.log("isEmptyCombination", isEmptyCombination);
+
+		let newCombination = { ...combination };
+		let currentInputIdNum;
+		let nextLetter;
+
+		if (isFullCombination) {
+			// Reset state and view
+			document.getElementById(inputIdPrefix + "1").value = "";
+			document.getElementById(inputIdPrefix + "2").value = "";
+			document.getElementById(inputIdPrefix + "3").value = "";
+			newCombination[inputIdPrefix + "1"] = "";
+			newCombination[inputIdPrefix + "2"] = "";
+			newCombination[inputIdPrefix + "3"] = "";
+			setFeedback(<></>);
+			isEmptyCombination = true;
+		}
+
+		if (isPartialCombination) {
+			if (combination.base2 === "") {
+				currentInputIdNum = 2;
+			} else {
+				currentInputIdNum = 3;
+			}
+		}
+		if (isEmptyCombination) {
+			currentInputIdNum = 1;
+		}
+
+		let foundMissingAcid = false;
+		for (let acidKey in discoveredAcids.acids) {
+			if (!discoveredAcids.acids[acidKey] && !foundMissingAcid) {
+				if (isEmptyCombination) {
+					foundMissingAcid = true;
+					nextLetter = acids[acidKey].combinations[0].charAt(0);
+				} else if (isPartialCombination) {
+					let currentPartialComb =
+						combination.base1 +
+						combination.base2 +
+						combination.base3;
+					for (let combIndex in acids[acidKey].combinations) {
+						let comb = acids[acidKey].combinations[combIndex];
+						if (comb.startsWith(currentPartialComb)) {
+							foundMissingAcid = true;
+							nextLetter = comb.charAt(currentInputIdNum - 1);
+						}
+					}
+				}
+			}
+		}
+
+		if (!foundMissingAcid) {
+			setFeedback(
+				<>
+					<p>Found all combinations with this start</p>
+				</>
+			);
+		} else {
+			let currentInputId = inputIdPrefix + currentInputIdNum;
+			document.getElementById(currentInputId).value = nextLetter;
+			newCombination[currentInputId] = nextLetter;
+			setCombination(newCombination);
+		}
 	}
 }
 
