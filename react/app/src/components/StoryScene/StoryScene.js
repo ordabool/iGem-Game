@@ -15,14 +15,14 @@ function StoryScene(props) {
 				</h4>
 				<button
 					type="button"
-					class="btn btn-primary"
+					className="btn btn-primary"
 					onClick={() => props.setActiveScene("aminoAcids")}
 				>
 					Continue
 				</button>
 				<div>
 					<div className="scientist float-md-end"></div>
-					<div class="clearfix"></div>
+					<div className="clearfix"></div>
 				</div>
 			</div>
 		</>
