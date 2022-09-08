@@ -4,5 +4,13 @@ h4 {
 }
 
 button {
-	margin: 1em auto 2.5em auto;
+	margin: 1em auto;
+}
+
+.scientist {
+	background-image: url("../../assets/scientist.png");
+	background-size: cover;
+	height: 300px;
+	width: 300px;
+	margin-bottom: 1.5em;
 }

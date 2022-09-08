@@ -3,7 +3,7 @@ import "./StoryScene.css";
 function StoryScene(props) {
 	return (
 		<>
-			<div className="text-center">
+			<div className="container text-center">
 				<h3 className="lh-lg">
 					After 20 years of research the wise scientist is missing and
 					left all of his work behind.
@@ -20,6 +20,10 @@ function StoryScene(props) {
 				>
 					Continue
 				</button>
+				<div>
+					<div className="scientist float-md-end"></div>
+					<div class="clearfix"></div>
+				</div>
 			</div>
 		</>
 	);
