@@ -16,7 +16,7 @@ function StoryScene(props) {
 				<button
 					type="button"
 					className="btn btn-primary"
-					onClick={() => props.setActiveScene("aminoAcids")}
+					onClick={() => props.setActiveScene("genesInstruction")}
 				>
 					Continue
 				</button>

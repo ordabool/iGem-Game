@@ -1,0 +1,22 @@
+{
+	"light": {
+		"effect": "Makes the bacteria glow",
+		"parts": ["light-promotor", "light-gene", "light-terminator"]
+	},
+	"color": {
+		"effect": "Makes the bacteria change colors",
+		"parts": ["color-promotor", "color-gene", "color-terminator"]
+	},
+	"plasticDigestion": {
+		"effect": "Enables the bacteria to digest plastic",
+		"parts": [
+			"plastic-digestion-promotor",
+			"plastic-digestion-gene",
+			"plastic-digestion-terminator"
+		]
+	},
+	"size": {
+		"effect": "Enlarges the bacteria",
+		"parts": ["size-promotor", "size-gene", "size-terminator"]
+	}
+}
