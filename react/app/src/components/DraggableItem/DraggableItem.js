@@ -7,7 +7,6 @@ function DraggableItem({ type, placeItem }) {
 		end: (item, monitor) => {
 			const dropResult = monitor.getDropResult();
 			if (item && dropResult) {
-				// alert(`You dropped ${item.name} into ${dropResult.name}!`);
 				placeItem(type);
 				console.log("Dropped!");
 			}
@@ -23,15 +22,16 @@ function DraggableItem({ type, placeItem }) {
 		backgroundSize: "contain",
 		backgroundRepeat: "no-repeat",
 		backgroundPosition: "center",
-		height: "4em",
+		height: "8em",
+		width: "8em",
 		color: "white",
-		margin: "0.4em",
+		margin: "0.4em auto",
 	};
 
 	const opacity = isDragging ? 0.4 : 1;
 	return (
 		<div ref={drag} style={{ ...style, opacity }} data-testid={`box`}>
-			{type.name}
+			{/* {type.name} */}
 		</div>
 	);
 }

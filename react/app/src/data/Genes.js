@@ -4,6 +4,7 @@ const parts = DraggableItemTypes;
 
 export const Genes = {
 	LIGHT: {
+		name: "Light gene",
 		effect: "Makes the bacteria glow",
 		combination: [
 			parts.LIGHT_PROMOTOR,
@@ -12,6 +13,7 @@ export const Genes = {
 		],
 	},
 	COLOR: {
+		name: "Color gene",
 		effect: "Makes the bacteria change colors",
 		combination: [
 			parts.COLOR_PROMOTOR,
@@ -20,6 +22,7 @@ export const Genes = {
 		],
 	},
 	PLASTIC_DIGESTION: {
+		name: "Plastic digestion gene",
 		effect: "Enables the bacteria to digest plastic",
 		combination: [
 			parts.PLASTIC_DIGESTION_PROMOTOR,
@@ -28,6 +31,7 @@ export const Genes = {
 		],
 	},
 	SIZE: {
+		name: "Size gene",
 		effect: "Enlarges the bacteria",
 		combination: [
 			parts.SIZE_PROMOTOR,

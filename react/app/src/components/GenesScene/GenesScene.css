@@ -1,3 +1,13 @@
 .col-3 {
 	border-left: 1px dotted black;
 }
+
+.geneOutline {
+	width: 28em;
+	height: 10em;
+	background-image: url("../../assets/puzzle-outline.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 3em auto;
+}
