@@ -8,6 +8,7 @@ import "./GenesScene.css";
 function GenesScene(props) {
 	const [genesParts, setGenesParts] = useState([]);
 	const [foundParts, setFoundParts] = useState([]);
+	const [completedLevel, setCompletedLevel] = useState(false);
 
 	// Initialize genesParts and genes
 	useEffect(() => {
@@ -19,13 +20,6 @@ function GenesScene(props) {
 		setGenesParts([...initialGenesParts]);
 	}, []);
 
-	// const tooltipTriggerList = document.querySelectorAll(
-	// 	'[data-bs-toggle="tooltip"]'
-	// );
-	// const tooltipList = [...tooltipTriggerList].map(
-	// 	(tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-	// );
-
 	function placeItem(draggableItem) {
 		foundParts.push(draggableItem.name);
 		const newGenesParts = [...genesParts].filter(
@@ -33,12 +27,8 @@ function GenesScene(props) {
 		);
 		setGenesParts([...newGenesParts]);
 		if ([...newGenesParts].length === 0) {
-			completedLevel();
+			setCompletedLevel(true);
 		}
-	}
-
-	function completedLevel() {
-		console.log("completed level!");
 	}
 
 	const dropZoneStyle = {
@@ -57,56 +47,88 @@ function GenesScene(props) {
 				<div className="row">
 					<div className="col-9">
 						<h4>Assemble Genes</h4>
+						<p>
+							Assemble 4 different genes.
+							<br />
+							Gene = Promotor + Target gene + Terminator).
+						</p>
+						<p className="text-start">
+							<b>Promotor:</b> A region of the DNA that allows
+							relevant proteins to bind and begin the expression
+							of the gene.
+							<br />
+							<b>Target gene:</b> what kind of features and
+							characteristics our bacteria would have?
+							<br />
+							<b>Terminator:</b> A region of the DNA that tells
+							where we can end the gene expression.
+						</p>
 						{Object.keys(Genes).map((geneKey) => {
 							const gene = Genes[geneKey];
+							let numOfCompleteParts = 0;
 							return (
-								<div
-									className="geneOutline row align-items-center"
-									key={gene.name}
-								>
-									{gene.combination.map((part, i) => {
-										const classNameForMargin = "margin" + i;
-										let width;
-										switch (i) {
-											case 0:
-												width = "10.2em";
-												break;
-											case 1:
-												width = "8.7em";
-												break;
-											case 2:
-												width = "10.5em";
-												break;
-										}
-										const backgroundImage = `url(${part.bg})`;
-										return (
-											<div
-												className={
-													"col " + classNameForMargin
-												}
-												key={part.name}
-											>
-												<DropZone
-													type={part}
-													key={part.name}
-													style={{
-														...dropZoneStyle,
-														width,
-													}}
-													activeStyle={{
-														...dropZoneActiveStyle,
-														backgroundImage,
-													}}
-													isFound={
-														![
-															...genesParts,
-														].includes(part)
+								<>
+									<div
+										className="geneOutline row align-items-center"
+										key={gene.name}
+									>
+										{gene.combination.map((part, i) => {
+											const classNameForMargin =
+												"margin" + i;
+											let width;
+											switch (i) {
+												case 0:
+													width = "10.2em";
+													break;
+												case 1:
+													width = "8.7em";
+													break;
+												case 2:
+													width = "10.5em";
+													break;
+											}
+											const backgroundImage = `url(${part.bg})`;
+											const genePartFound = ![
+												...genesParts,
+											].includes(part);
+											if (genePartFound) {
+												numOfCompleteParts++;
+											}
+											return (
+												<div
+													className={
+														"col " +
+														classNameForMargin
 													}
-												/>
-											</div>
-										);
-									})}
-								</div>
+													key={part.name}
+												>
+													<DropZone
+														type={part}
+														key={part.name}
+														style={{
+															...dropZoneStyle,
+															width,
+														}}
+														activeStyle={{
+															...dropZoneActiveStyle,
+															backgroundImage,
+														}}
+														isFound={genePartFound}
+													/>
+												</div>
+											);
+										})}
+									</div>
+									{numOfCompleteParts === 3 && (
+										<>
+											<p>
+												<b>{gene.name}</b> found!
+												<br />
+												The gene {gene.effect}
+											</p>
+										</>
+									)}
+								</>
 							);
 						})}
 					</div>
@@ -121,6 +143,23 @@ function GenesScene(props) {
 								/>
 							);
 						})}
+						{completedLevel && (
+							<>
+								<p>
+									Congraduations! You just finished assembling
+									all the genes!
+								</p>
+								<button
+									type="button"
+									className="btn btn-primary"
+									onClick={() =>
+										props.setActiveScene("aminoAcids")
+									}
+								>
+									Continue
+								</button>
+							</>
+						)}
 					</div>
 				</div>
 			</div>
