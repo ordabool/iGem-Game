@@ -14,7 +14,7 @@ function App() {
 		aminoAcids: AminoAcidsScene,
 	};
 
-	const [activeScene, setActiveScene] = useState("genes");
+	const [activeScene, setActiveScene] = useState("story");
 
 	const SpecificScene = components[activeScene];
 	return (
