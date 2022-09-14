@@ -7,36 +7,48 @@ import DropZone from "../DropZone/DropZone";
 import "./GenesScene.css";
 function GenesScene(props) {
 	const [genesParts, setGenesParts] = useState([]);
+	const [foundParts, setFoundParts] = useState([]);
 
-	// Initialize genesParts
+	// Initialize genesParts and genes
 	useEffect(() => {
 		let initialGenesParts = [];
 		for (let itemType in DraggableItemTypes) {
 			initialGenesParts.push(DraggableItemTypes[itemType]);
 		}
 		shuffle(initialGenesParts);
-		setGenesParts(initialGenesParts);
+		setGenesParts([...initialGenesParts]);
 	}, []);
 
+	// const tooltipTriggerList = document.querySelectorAll(
+	// 	'[data-bs-toggle="tooltip"]'
+	// );
+	// const tooltipList = [...tooltipTriggerList].map(
+	// 	(tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+	// );
+
 	function placeItem(draggableItem) {
-		const newGenesParts = genesParts.filter(
-			(part) => part.name !== draggableItem.name
+		foundParts.push(draggableItem.name);
+		const newGenesParts = [...genesParts].filter(
+			(part) => ![...foundParts].includes(part.name)
 		);
-		setGenesParts(newGenesParts);
+		setGenesParts([...newGenesParts]);
+		if ([...newGenesParts].length === 0) {
+			completedLevel();
+		}
+	}
+
+	function completedLevel() {
+		console.log("completed level!");
 	}
 
 	const dropZoneStyle = {
 		height: "10em",
-		width: "7.5em",
-		border: "1px solid black",
-		margin: "auto",
 	};
 
 	const dropZoneActiveStyle = {
 		backgroundSize: "contain",
 		backgroundRepeat: "no-repeat",
 		backgroundPosition: "center",
-		filter: "opacity(50%) grayscale(100%) blur(3px) drop-shadow(0 0 0.01rem black)",
 	};
 
 	return (
@@ -52,16 +64,44 @@ function GenesScene(props) {
 									className="geneOutline row align-items-center"
 									key={gene.name}
 								>
-									{gene.combination.map((part) => {
+									{gene.combination.map((part, i) => {
+										const classNameForMargin = "margin" + i;
+										let width;
+										switch (i) {
+											case 0:
+												width = "10.2em";
+												break;
+											case 1:
+												width = "8.7em";
+												break;
+											case 2:
+												width = "10.5em";
+												break;
+										}
+										const backgroundImage = `url(${part.bg})`;
 										return (
 											<div
-												className="col"
+												className={
+													"col " + classNameForMargin
+												}
 												key={part.name}
 											>
 												<DropZone
 													type={part}
 													key={part.name}
-													style={dropZoneStyle}
+													style={{
+														...dropZoneStyle,
+														width,
+													}}
+													activeStyle={{
+														...dropZoneActiveStyle,
+														backgroundImage,
+													}}
+													isFound={
+														![
+															...genesParts,
+														].includes(part)
+													}
 												/>
 											</div>
 										);
@@ -72,7 +112,7 @@ function GenesScene(props) {
 					</div>
 					<div className="col-3">
 						<h4>Tools</h4>
-						{genesParts.map((part) => {
+						{[...genesParts].map((part) => {
 							return (
 								<DraggableItem
 									key={part.name}

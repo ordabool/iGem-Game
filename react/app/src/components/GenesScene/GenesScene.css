@@ -11,3 +11,20 @@
 	background-position: center;
 	margin: 3em auto;
 }
+
+.margin0 {
+	padding: 0;
+	margin-left: 0.6em;
+	width: 7em;
+}
+
+.margin1 {
+	padding: 0;
+	margin-left: 1.8em;
+	width: 7em;
+}
+
+.margin2 {
+	padding: 0;
+	margin-right: 0.6em;
+}

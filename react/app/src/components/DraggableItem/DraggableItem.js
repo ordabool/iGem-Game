@@ -8,7 +8,6 @@ function DraggableItem({ type, placeItem }) {
 			const dropResult = monitor.getDropResult();
 			if (item && dropResult) {
 				placeItem(type);
-				console.log("Dropped!");
 			}
 		},
 		collect: (monitor) => ({
