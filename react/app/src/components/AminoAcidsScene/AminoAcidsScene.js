@@ -7,7 +7,7 @@ const inputIdPrefix = "base";
 const minInputNumber = 1;
 const maxInputNumber = 3;
 
-function AminoAcidsScene() {
+function AminoAcidsScene(props) {
 	const [combination, setCombination] = useState({
 		base1: "",
 		base2: "",
@@ -141,9 +141,25 @@ function AminoAcidsScene() {
 				Hint
 			</button>
 
-			{feedback}
+			{discoveredAcids.acidsFoundCount !== discoveredAcids.acidsCount &&
+				feedback &&
+				foundOutput}
 
-			{foundOutput}
+			{discoveredAcids.acidsFoundCount === discoveredAcids.acidsCount && (
+				<>
+					<h5>
+						You have found all {discoveredAcids.acidsCount} Amino
+						Acids!
+					</h5>
+					<button
+						type="button"
+						className="btn btn-primary"
+						onClick={() => props.setActiveScene("summary")}
+					>
+						Continue
+					</button>
+				</>
+			)}
 
 			<div className="bottomElement"></div>
 		</div>
@@ -197,10 +213,6 @@ function AminoAcidsScene() {
 			combination.base1 === "" &&
 			combination.base2 === "" &&
 			combination.base3 === "";
-
-		// console.log("isFullCombination", isFullCombination);
-		// console.log("isPartialCombination", isPartialCombination);
-		// console.log("isEmptyCombination", isEmptyCombination);
 
 		let newCombination = { ...combination };
 		let currentInputIdNum;
