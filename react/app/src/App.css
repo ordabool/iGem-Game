@@ -2,8 +2,17 @@ html {
 	padding: 10px;
 }
 
-body {
-	font-family: "Open Sans", sans-serif;
+@font-face {
+	font-family: "Open Sans";
+	src: url("./assets/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("ttf");
+	font-weight: bold;
+	font-display: swap;
+}
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: "Open Sans";
+	font-weight: 400;
 }
 
 h2 {
@@ -13,7 +22,6 @@ h2 {
 }
 
 body {
-	/* background: #23d5ab; */
 	background-image: url("./assets/bg.jpg");
 	background-size: 100vw;
 }
