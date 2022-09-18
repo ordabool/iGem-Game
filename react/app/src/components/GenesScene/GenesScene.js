@@ -153,7 +153,9 @@ function GenesScene(props) {
 									type="button"
 									className="btn btn-primary"
 									onClick={() =>
-										props.setActiveScene("aminoAcids")
+										props.setActiveScene(
+											"plasmidsInstruction"
+										)
 									}
 								>
 									Continue

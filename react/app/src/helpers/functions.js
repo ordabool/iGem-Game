@@ -17,3 +17,18 @@ export const shuffle = (array) => {
 
 	return array;
 };
+
+export const getNextStage = (stage) => {
+	let nextStage;
+	switch (stage) {
+		case "circle":
+			nextStage = "cutout";
+			break;
+		case "cutout":
+		case "full":
+			nextStage = "full";
+			break;
+	}
+
+	return nextStage;
+};

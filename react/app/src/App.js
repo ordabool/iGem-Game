@@ -4,6 +4,8 @@ import "./App.css";
 import AminoAcidsScene from "./components/AminoAcidsScene/AminoAcidsScene";
 import GenesInstructionsScene from "./components/GenesInstructionsScene/GenesInstructionsScene";
 import GenesScene from "./components/GenesScene/GenesScene";
+import PlasmidsInstructionsScene from "./components/PlasmidsInstructionsScene/PlasmidsInstructionsScene";
+import PlasmidsScene from "./components/PlasmidsScene/PlasmidsScene";
 import StoryScene from "./components/StoryScene/StoryScene";
 
 function App() {
@@ -11,6 +13,8 @@ function App() {
 		story: StoryScene,
 		genesInstruction: GenesInstructionsScene,
 		genes: GenesScene,
+		plasmidsInstruction: PlasmidsInstructionsScene,
+		plasmids: PlasmidsScene,
 		aminoAcids: AminoAcidsScene,
 	};
 
