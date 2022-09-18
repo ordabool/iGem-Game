@@ -26,6 +26,7 @@ export const getNextStage = (stage) => {
 			break;
 		case "cutout":
 		case "full":
+		default:
 			nextStage = "full";
 			break;
 	}

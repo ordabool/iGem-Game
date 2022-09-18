@@ -26,6 +26,7 @@ function GenesScene(props) {
 			(part) => ![...foundParts].includes(part.name)
 		);
 		setGenesParts([...newGenesParts]);
+		setFoundParts(foundParts);
 		if ([...newGenesParts].length === 0) {
 			setCompletedLevel(true);
 		}
@@ -84,6 +85,7 @@ function GenesScene(props) {
 													width = "8.7em";
 													break;
 												case 2:
+												default:
 													width = "10.5em";
 													break;
 											}

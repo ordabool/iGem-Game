@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useDrop } from "react-dnd";
 
 function DropZone({ type, style, activeStyle, isFound }) {

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { getNextStage } from "../../helpers/functions";
 import DropZone from "../DropZone/DropZone";
 import "./Plasmid.css";
@@ -18,6 +17,7 @@ function Plasmid(props) {
 			dropType = plasmid.gene;
 			break;
 		case "full":
+		default:
 			dropType = { name: "-" };
 			break;
 	}
