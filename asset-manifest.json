@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/iGem-Game/static/css/main.54f41399.chunk.css",
-    "main.js": "/iGem-Game/static/js/main.50fe9e2a.chunk.js",
-    "main.js.map": "/iGem-Game/static/js/main.50fe9e2a.chunk.js.map",
+    "main.js": "/iGem-Game/static/js/main.ef3d68a6.chunk.js",
+    "main.js.map": "/iGem-Game/static/js/main.ef3d68a6.chunk.js.map",
     "runtime-main.js": "/iGem-Game/static/js/runtime-main.f67f4f76.js",
     "runtime-main.js.map": "/iGem-Game/static/js/runtime-main.f67f4f76.js.map",
     "static/css/2.61b4cb56.chunk.css": "/iGem-Game/static/css/2.61b4cb56.chunk.css",
@@ -52,6 +52,6 @@
     "static/css/2.61b4cb56.chunk.css",
     "static/js/2.73d2b8c4.chunk.js",
     "static/css/main.54f41399.chunk.css",
-    "static/js/main.50fe9e2a.chunk.js"
+    "static/js/main.ef3d68a6.chunk.js"
   ]
 }
