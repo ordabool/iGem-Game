@@ -142,7 +142,9 @@ function AminoAcidsScene(props) {
 			</button>
 
 			{discoveredAcids.acidsFoundCount !== discoveredAcids.acidsCount &&
-				feedback &&
+				feedback}
+
+			{discoveredAcids.acidsFoundCount !== discoveredAcids.acidsCount &&
 				foundOutput}
 
 			{discoveredAcids.acidsFoundCount === discoveredAcids.acidsCount && (
